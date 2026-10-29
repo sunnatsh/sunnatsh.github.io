@@ -4,51 +4,58 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy – Shorts Farm Uploader</title>
-<style>
-  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222; background: #fff; }
-  h1 { font-size: 1.8em; margin-bottom: 0.2em; }
-  a { color: #0b57d0; }
-  footer { margin-top: 48px; font-size: 0.9em; color: #666; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+
 <h1>Privacy Policy</h1>
 <p><em>Last updated: October 30, 2026</em></p>
 
-<p>This policy describes how Shorts Farm Uploader ("the tool") handles data. The tool is a private, internal application used only by its owner to upload their own videos to their own YouTube channels. It has no third-party users.</p>
+<p>This policy describes how Shorts Farm Uploader ("the tool") accesses, uses, stores, shares and deletes data. The tool is a private, internal application used only by its owner to upload their own videos to their own YouTube channels. It has no third-party users.</p>
 
-<h2>Data the tool accesses</h2>
-<p>Through the YouTube Data API, with the owner's consent given via Google OAuth, the tool uses:</p>
+<h2>YouTube API Services</h2>
+<p>The tool uses <strong>YouTube API Services</strong> (YouTube Data API v3). By using the tool you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the Google Privacy Policy: <a href="http://www.google.com/policies/privacy">http://www.google.com/policies/privacy</a>.</p>
+
+<h2>Information the tool accesses and collects</h2>
+<p>With the owner's consent given through Google OAuth, the tool requests two permissions:</p>
 <ul>
-  <li>Basic information about the owner's own YouTube channels (channel ID and title), to choose where to upload.</li>
-  <li>The ability to upload videos and set their metadata (title, description, tags, thumbnail, privacy status, publish time).</li>
-  <li>Information about videos already uploaded to the owner's channels, to manage them.</li>
+  <li><code>youtube.readonly</code> — to read the connected channel's ID, title, handle and statistics (subscribers, videos, views), and the titles, IDs and processing status of videos already uploaded to that channel.</li>
+  <li><code>youtube.upload</code> — to upload the owner's videos and set their title, description, tags, privacy status and thumbnail.</li>
 </ul>
-<p>The tool does not access, collect or process any data of other YouTube users, and it does not use Google user data for advertising or any purpose other than uploading and managing the owner's own videos.</p>
+<p>The tool does not request access to comments, messages, subscribers' personal data, analytics, monetization or any other Google service. It does not access or collect data of other YouTube users.</p>
 
-<h2>Storage of tokens and data</h2>
-<p>OAuth access and refresh tokens are stored only locally, on the owner's own computer. They are not uploaded to any server, database or cloud service operated by the tool. Video files and metadata stay on the owner's computer until they are sent directly to YouTube.</p>
+<h2>How the information is used</h2>
+<p>The information is used only to show the owner which channels are connected, to upload the owner's videos to the chosen channel, to show the upload and processing status, and to avoid uploading the same video twice. It is not used for advertising, profiling, sale or any other purpose.</p>
+
+<h2>Storage</h2>
+<ul>
+  <li>OAuth refresh tokens are stored only locally, in a file on the owner's own computer. They are not uploaded to any server, database or cloud service operated by the tool.</li>
+  <li>A local log on the owner's computer records, for each uploaded video, its title, YouTube video ID, link, privacy status and upload time.</li>
+  <li>Video files and their metadata stay on the owner's computer until they are sent directly to YouTube.</li>
+  <li>The tool's dashboard runs on localhost only. It does not set advertising or tracking cookies and does not store data in the browser.</li>
+</ul>
 
 <h2>Sharing</h2>
-<p>Data is not sold, shared with or transferred to any third party. The only external service the tool communicates with is Google / YouTube, through the official YouTube Data API.</p>
+<p>Data is not sold, shared with, disclosed to or transferred to any third party. The only external service the tool communicates with for YouTube data is Google / YouTube, through the official YouTube Data API.</p>
+
+<h2>Retention and deletion</h2>
+<ul>
+  <li>Data retrieved from the YouTube API (channel statistics, video lists, processing status) is shown in the dashboard and is not stored, except the video ID, title, link and time in the local upload log.</li>
+  <li>The owner can delete all stored data at any time by deleting the local token file and upload log. The dashboard's "Disconnect" button deletes a channel's stored token.</li>
+  <li>If access is revoked in the Google account, the stored token stops working and is deleted the next time the tool detects this, and in any case within 7 days.</li>
+  <li>To ask for deletion of any data related to the tool, write to <a href="mailto:sunnat.shukhratov@gmail.com">sunnat.shukhratov@gmail.com</a>; the request is completed within 7 days.</li>
+</ul>
 
 <h2>Revoking access</h2>
-<p>Access can be revoked at any time:</p>
-<ul>
-  <li>Open <a href="https://myaccount.google.com/permissions">Google Account → Security → Third-party apps with account access</a>, select "Shorts Farm Uploader" and choose "Remove access".</li>
-  <li>Delete the locally stored token files from the computer where the tool runs.</li>
-</ul>
-<p>After revocation the tool can no longer access the YouTube account.</p>
-
-<h2>YouTube and Google policies</h2>
-<p>The tool uses YouTube API Services. By using it you are also subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p>Access can be revoked at any time on the Google security settings page: <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a> — select "Shorts Farm Uploader" and choose "Remove access". After revocation the tool can no longer access the YouTube account. The dashboard also shows this link.</p>
 
 <h2>Changes</h2>
-<p>If this policy changes, the updated version will be published on this page with a new "Last updated" date.</p>
+<p>If this policy changes, the updated version is published on this page with a new "Last updated" date.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy: <a href="mailto:sunnat.shukhratov@gmail.com">sunnat.shukhratov@gmail.com</a></p>
 
-<footer><a href="index.html">Home</a></footer>
+<footer><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><br>Shorts Farm Uploader uses YouTube API Services. YouTube is a trademark of Google LLC.</footer>
 </body>
 </html>
